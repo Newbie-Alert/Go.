@@ -3,13 +3,10 @@ dotenv.config();
 
 export const config = {
   jwt: {
-    secretKey: 'qT!VF`1WHx6(.[C:g5gNB:[vFi0vh7#M',
-    expiredSec: 86400,
+    secretKey: process.env.JWT_SECRET_KEY,
+    expiredSec: process.env.JWT_EXPIRED_SEC,
   },
   bcrypt: {
-    saltRounds: 10,
+    saltRounds: process.env.BCRYPT_SALT_ROUNDS,
   },
-  db: {
-    host: required('DB_HOST', 'mongodb+srv://goOwner:dhkvmfrha1234@cluster0.4zhmecf.mongodb.net/?retryWrites=true&w=majority')
-  }
 }
