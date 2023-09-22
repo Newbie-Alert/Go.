@@ -1,6 +1,6 @@
-let users = [
+export let users = [
   {
-    "username": "username",
+    "nickname": "username",
     "password": "$2b$10$XkhKcb.1dlAv63MSnPQegOPRYjKU6s3pqYnhMT0ADHmuIp9iwyfha",  // ('pass1234')
     "name": "Choonsik",
     "email": "nya@nyan.com"
@@ -8,8 +8,8 @@ let users = [
 
 ]
 
-export async function getUserByName(username) {
-  return users.find(user => user.username === username)
+export async function getUserByName(nickname) {
+  return users.find(user => user.nickname === nickname)
 }
 
 export async function createUser(info) {

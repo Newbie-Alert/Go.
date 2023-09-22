@@ -6,7 +6,7 @@ import * as authController from '../Controller/authController.js'
 export const authRouter = express.Router()
 
 const validateSignIn = [
-  body('username').trim()
+  body('nickname').trim()
     .notEmpty().withMessage('username is missing')
     .isLength({ min: 3, max: 8 }).withMessage('text should be at least 3 characters')
   , body('password').trim()
@@ -17,7 +17,7 @@ const validateSignIn = [
 
 const validateSignUp = [
   ...validateSignIn
-  , body('name').trim()
+  , body('username').trim()
     .notEmpty().withMessage('text should be at least 3 characters')
   , body('email').trim()
     .notEmpty().withMessage('email is missing')
@@ -29,4 +29,4 @@ const validateSignUp = [
 
 authRouter.post('/signup', validateSignUp, authController.signUp)
 
-authRouter.post('/signin', validateSignIn, authController.signIn)
+authRouter.post('/login', validateSignIn, authController.signIn)
