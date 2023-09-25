@@ -1,0 +1,25 @@
+.user_menu_container {
+  position: absolute;
+  bottom: -281%;
+  right: 0;
+  width: 15%;
+  background-color: rgb(255, 255, 255);
+  z-index: 3;
+}
+
+.user_menus li {
+  list-style: none;
+  text-align: left;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.user_menus li:hover {
+  background-color: #eee;
+}
+
+.menu_link {
+  text-decoration: none;
+  color: black;
+}
