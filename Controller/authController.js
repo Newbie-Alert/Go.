@@ -56,6 +56,7 @@ export async function signIn(req, res) {
 }
 
 
+
 function createJWT(userId) {
   return jwt.sign({ userId }, config.jwt.secretKey, { expiresIn: config.jwt.expiredSec })
 }

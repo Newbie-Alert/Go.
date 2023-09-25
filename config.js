@@ -11,5 +11,8 @@ export const config = {
   },
   host: {
     port: parseInt(process.env.PORT)
+  },
+  db: {
+    connect: process.env.DB_HOST
   }
 }
